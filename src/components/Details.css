@@ -1,0 +1,22 @@
+.detail-container {
+    display: grid;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    grid-gap: 2rem;
+    justify-items: center;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.blog-img {
+    max-width: 65%;
+    height: auto;
+}
+
+.blog-detail p {
+    margin-top: 10px;
+    font-size: 14px;
+}

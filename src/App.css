@@ -1,0 +1,30 @@
+.App {
+  min-height: 100vh;
+}
+
+.light {
+  background: white;
+  color: #000;
+  transition: all 0.5s;
+}
+
+
+.card {
+  background: #1a1a1b;
+  color: white;
+  transition: all 0.5s;
+}
+
+.dark {
+  background: #1a1a1b;
+  color: white;
+  transition: all 0.5s;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  .dark {
+    max-height: 844px;
+  }
+}
