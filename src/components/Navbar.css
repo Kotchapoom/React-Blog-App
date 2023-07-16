@@ -72,6 +72,17 @@ ul.nav-menu li a:hover {
     opacity: 0.6;
 }
 
+@media only screen and (max-width: 958px) {
+    .nav-container {
+        max-width: 960px;
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
 /* 480 px */
 @media only screen and (max-width: 480px) {
     nav {

@@ -6,13 +6,15 @@ import { useState, useEffect } from "react";
 export default function Blog() {
   const [search, setSearch] = useState("");
   const [filterBlog, setFilterBlog] = useState([]);
+
   useEffect(() => {
     //กรองข้อมูลบทความ
     const result = blogs.filter((item) =>
       item.title
         .toUpperCase()
         .toLowerCase()
-        .includes(search.toLowerCase().toUpperCase())
+        .includes(search.toLowerCase())
+        
     );
     setFilterBlog(result);
   }, [search]);
@@ -32,12 +34,18 @@ export default function Blog() {
         {filterBlog.map((item) => (
           <Link to={`/blog/${item.id}`} key={item.id}>
             <div className="card">
-              <h2>{item.title}</h2>
-              <p>{item.content.substring(0, 300)}</p>
+            <img src={item.image} alt={item.title} className="blogs-img" />
+              <div className="overlay">
+                <h2>{item.title}</h2>
+                <p>{item.content.substring(0, 300)}</p>
+              </div>
             </div>
           </Link>
         ))}
       </article>
+      <footer>
+        <div></div>
+      </footer>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import About from "./components/About";
 import Blogs from "./components/Blogs";
 import NotFound from "./components/NotFound";
 import Deatails from "./components/Details";
-import Footer from "./components/Footer";
+
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
@@ -25,7 +25,7 @@ function App() {
           <Route path="/info" element={<Navigate to="/about" />}></Route>
           <Route path="/blog/:id" element={<Deatails />}></Route>
         </Routes>
-        <Footer />
+        
       </BrowserRouter>
     </div>
   );

@@ -3,7 +3,7 @@ import about from "../images/about.svg";
 export default function About() {
   return (
     <div className="container">
-      <h2>About me</h2>
+      <h2 className="title">About</h2>
       <img src={about} alt="about" />
     </div>
   );
