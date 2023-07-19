@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./Navbar.css";
 import { GoSun } from "react-icons/go";
 import { BiSolidMoon } from "react-icons/bi";
 
 export default function Navbar(props) {
   const { theme, setTheme } = props;
+  const [openMenu, setOpenMenu] = useState(false)
 
 
   function ToggleTheme() {
@@ -16,7 +18,6 @@ export default function Navbar(props) {
 
   }
 
-
   return (
     <nav>
       <div className="nav-container">
@@ -24,7 +25,14 @@ export default function Navbar(props) {
           <Link to="/" className="logo">
             <h1>Blog Application</h1>
           </Link>
-          <ul className="nav-menu">
+          <div className="hamburg" onClick={()=>(
+            setOpenMenu(!openMenu)
+          )}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul className={openMenu ? "open" : ""}>
             <li>
               <Link to="/">Home</Link>
             </li>
